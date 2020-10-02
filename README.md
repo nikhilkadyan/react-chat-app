@@ -1,4 +1,4 @@
-# react-groupcaht-app
+# react-chat-app
 
 This repo contains client side front end application (react) for groupchat app.
 
