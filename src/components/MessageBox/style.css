@@ -1,0 +1,45 @@
+.messagebox-container {
+    padding: 7px 10px;
+    width: 90vw;
+    max-width: 700px;
+    height: 60vh;
+    max-height: 600px;
+    background: #333;
+    padding: 20px 10px;
+    border-radius: 7px;
+    overflow-y: scroll;
+}
+
+.messagebox-container .exit {
+    color: white;
+    background: red;
+    padding: 2px 8px 5px 8px;
+    border-radius: 4px;
+    text-decoration: none;
+    float: right;
+    margin-top: -5px;
+    cursor: pointer;
+}
+
+.messagebox-container .message {
+    padding: 5px 15px;
+    background: #444;
+    margin-bottom: 10px;
+    border-radius: 7px;
+}
+.messagebox-container .message h2 {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+.messagebox-container .message small {
+    color: #bbb;
+    font-size: 0.5rem;
+}
+
+.messagebox-container .message-sent {
+    text-align: right;
+}
+
+.messagebox-container .message-recieved {
+    text-align: left;
+}

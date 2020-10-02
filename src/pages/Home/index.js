@@ -1,13 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { v4 as uuid } from 'uuid'
 import './style.css'
 const Home = () => {
+    const randomId = uuid();
+
     return (
-        <div className="homeContainer">
+        <div className="homeContainer" style={{ height: window.innerHeight, width: window.innerWidth }}>
             <div>
                 <h1>React Group Chat</h1>
                 <p>
                     By Nikhil Kadyan
-                    <button>Join Room</button>
+                    <Link to={`/room/${randomId}`}>Join Room</Link>
                 </p>
             </div>
         </div>

@@ -1,0 +1,28 @@
+.room-container {
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.room-container .send-message{
+    margin-top: 10px;
+}
+.room-container .send-message input{
+    width: 75%;
+    padding: 7px 10px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.room-container .send-message button{
+    cursor: pointer;
+    border: none;
+    border-radius: 7px;
+    padding: 8px 10px;
+    float: right;
+}
+
+.room-container .send-message button:hover{
+    background: #4fd1c5;
+}

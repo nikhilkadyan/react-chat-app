@@ -1,0 +1,51 @@
+.updateName-container {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(3px);
+
+}
+
+.updateName-container div {
+    background: white;
+    color: black;
+    padding: 20px 10px;
+    border-radius: 7px;
+    height: 30vh;
+    max-height: 350px;
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.updateName-container div * {
+    width: 100%;
+}
+
+.updateName-container div input {
+    margin-bottom: 10%;
+    padding: 3px 7px;
+    border: 1px solid black;
+    border-radius: 7px;
+}
+
+.updateName-container div button {
+    display: block;
+    cursor: pointer;
+    padding: 5px 3px;
+    border: none;
+    border-radius: 7px;
+    background: #eee;
+    transition: 0.3s;
+}
+
+.updateName-container div button:hover {
+    background: #4fd1c5;
+}
