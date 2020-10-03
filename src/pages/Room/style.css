@@ -9,20 +9,23 @@
     margin-top: 10px;
 }
 .room-container .send-message input{
-    width: 75%;
+    width: calc(100% - 20px);
     padding: 7px 10px;
-    border: 1px solid black;
-    border-radius: 7px;
-}
-
-.room-container .send-message button{
-    cursor: pointer;
+    font-size: 1.2rem;
+    background: #fff;
+    box-shadow: 0 0 25px #ddd;
     border: none;
+    outline: none;
     border-radius: 7px;
-    padding: 8px 10px;
-    float: right;
 }
 
-.room-container .send-message button:hover{
-    background: #4fd1c5;
+@media screen and (max-width: 480px){
+    .room-container .send-message input{
+        position: fixed;
+        width: calc(100vw - 45px);
+        bottom: 3vh;
+        left: 12px;
+        border: 1px solid #ccc;
+        box-shadow: 0 0 25px #ccc;
+    }
 }

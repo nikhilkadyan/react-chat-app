@@ -1,39 +1,50 @@
+.messagebox-control {
+    margin-top: 5vh;
+    box-shadow: 0 0 25px #ddd;
+    border-radius: 7px;
+    padding: 10px 10px;
+}
+
+.messagebox-control .exit {
+    color: white;
+    background: #888;
+    box-shadow: 0 0 25px #ddd;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    border-radius: 3px;
+    text-decoration: none;
+    float: right;
+    margin-top: -1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.messagebox-control .exit:hover {
+    background: #D32F2F;
+    box-shadow: 0 0 5px #D32F2F;
+}
+
 .messagebox-container {
-    padding: 7px 10px;
-    width: 90vw;
-    max-width: 700px;
+    margin-top: 10px;
     height: 60vh;
     max-height: 600px;
-    background: #333;
+    background: #fff;
     padding: 20px 10px;
     border-radius: 7px;
     overflow-y: scroll;
+    box-shadow: 0 0 25px #ddd;
 }
 
-.messagebox-container .exit {
-    color: white;
-    background: red;
-    padding: 2px 8px 5px 8px;
-    border-radius: 4px;
-    text-decoration: none;
-    float: right;
-    margin-top: -5px;
-    cursor: pointer;
-}
 
 .messagebox-container .message {
     padding: 5px 15px;
-    background: #444;
-    margin-bottom: 10px;
     border-radius: 7px;
-}
-.messagebox-container .message h2 {
-    margin-top: 5px;
-    margin-bottom: 0px;
 }
 .messagebox-container .message small {
     color: #bbb;
+    display: block;
     font-size: 0.5rem;
+    margin-top: -15px;
 }
 
 .messagebox-container .message-sent {
@@ -42,4 +53,21 @@
 
 .messagebox-container .message-recieved {
     text-align: left;
+}
+
+@media screen and (max-width: 480px){
+    .messagebox-control {
+        position: fixed;
+        left: 12px;
+        width: calc(100% - 45px);
+    }
+    .messagebox-container {
+        position: fixed;
+        height: 55vh;
+        max-height: 55vh;
+        width: calc(100% - 45px);
+        left: 12px;
+        top: 12vh;
+        box-shadow: 0 0 25px #ccc;
+    }
 }

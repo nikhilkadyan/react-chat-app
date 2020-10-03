@@ -3,22 +3,27 @@ import { Link } from 'react-router-dom'
 import './style.css'
 const MessageBox = ({ messages }) => {
     const curr = localStorage.getItem('socket');
+    React.useEffect(() => {
+
+    },[messages])
     return (
-        <div className="messagebox-container">
-            Messages <Link to="/" className="exit">X</Link>
-            <hr />
+        <div style={{height: `${window.innerHeight} px` }}>
+            <div className="messagebox-control" >
+                Messages <Link to="/" className="exit">Leave</Link>
+            </div>
+            <div className="messagebox-container">
             {messages && messages.map((message, key) => {
                 return (
                     <div key={key}>
                         {message.type === 'join' &&
-                            <h2 style={{ color: `green`, textAlign: `center` }}>{message.content}</h2>
+                            <p className="content" style={{ color: `green`, textAlign: `center` }}>{message.content}</p>
                         }
                         {message.type === 'left' &&
-                            <h2 style={{ color: `red`, textAlign: `center` }}>{message.content}</h2>
+                            <p className="content"  style={{ color: `red`, textAlign: `center` }}>{message.content}</p>
                         }
                         {message.type === 'message' &&
                             <div className={curr === message.id ? 'message message-sent':'message message-recieved'}>
-                                <h2>{message.content}</h2>
+                                <p className="content" >{message.content}</p>
                                 <small>{curr === message.id ? "You" : message.sender}, {message.time}</small>
                             </div>
                         }
@@ -26,6 +31,7 @@ const MessageBox = ({ messages }) => {
                     </div>
                 )
             })}
+            </div>
         </div>
     )
 }

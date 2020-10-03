@@ -40,7 +40,7 @@ const Room = (props) => {
                         id: localStorage.getItem('socket'),
                         sender: name,
                         type: 'join',
-                        content: name + ' has joined the chat.',
+                        content: name + ' joined.',
                         time: new Date().toLocaleTimeString()
                     }
                 })
@@ -63,6 +63,14 @@ const Room = (props) => {
     const closeModal = () => setModal(false)
     const updatename = (name) => setName(name)
     const msgInputChange = (e) => setMsgInput(e.target.value)
+    const msgInputKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            if(msgInput !== ''){
+                sendMessage()
+            }
+            document.activeElement.blur();
+          }
+    }
     const sendMessage = () => {
         socketRef.current.emit("message", {
             roomID: roomID,
@@ -80,12 +88,12 @@ const Room = (props) => {
     return (
         <>
             {modal && <UpdateName closeModal={closeModal} updatename={updatename} />}
-            <div className="room-container" style={{ height: window.innerHeight, width: window.innerWidth }}>
-                <div>
+            <div className="room-container">
+                <div style={{ width: `100%`, maxWidth: `700px` }}>
                     <MessageBox messages={messages} />
                     <div className="send-message">
-                        <input type="text" onChange={msgInputChange} value={msgInput} />
-                        <button onClick={sendMessage}>Send Message</button>
+                        <input type="text" onChange={msgInputChange} value={msgInput} onKeyDown={msgInputKeyDown} placeholder="Message"/>
+                        {/* <button onClick={sendMessage}>Send Message</button> */}
                     </div>
                 </div>
             </div>
