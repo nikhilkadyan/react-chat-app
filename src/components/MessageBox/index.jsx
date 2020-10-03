@@ -8,9 +8,7 @@ const MessageBox = ({ messages }) => {
     },[messages])
     return (
         <div style={{height: `${window.innerHeight} px` }}>
-            <div className="messagebox-control" >
-                Messages <Link to="/" className="exit">Leave</Link>
-            </div>
+            <Link to="/" className="exit">Leave</Link>
             <div className="messagebox-container">
             {messages && messages.map((message, key) => {
                 return (

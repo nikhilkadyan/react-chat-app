@@ -68,7 +68,9 @@ const Room = (props) => {
             if(msgInput !== ''){
                 sendMessage()
             }
-            document.activeElement.blur();
+            if(window.innerHeight < 500){
+                document.activeElement.blur();
+            }
           }
     }
     const sendMessage = () => {
@@ -88,7 +90,7 @@ const Room = (props) => {
     return (
         <>
             {modal && <UpdateName closeModal={closeModal} updatename={updatename} />}
-            <div className="room-container">
+            <div className="room-container" style={{ height: window.innerHeight }}>
                 <div style={{ width: `100%`, maxWidth: `700px` }}>
                     <MessageBox messages={messages} />
                     <div className="send-message">

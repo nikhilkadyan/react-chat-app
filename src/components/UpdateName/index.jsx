@@ -4,7 +4,6 @@ import './style.css';
 
 const UpdateName = (props) => {
     const [input, setInput] = useState('');
-
     const onInput = (e) => setInput(e.target.value);
 
     const submitName = (e) => {
@@ -22,7 +21,7 @@ const UpdateName = (props) => {
     return (
         <div className="updateName-container" style={{ height: window.innerHeight, width: window.innerWidth }}>
             <div>
-                <h1>Your Name</h1>
+                <h1>Welcome</h1>
                 <input type="text" onChange={onInput} value={input} placeholder="Enter your name" />
                 <button onClick={submitName}>Save</button>
             </div>

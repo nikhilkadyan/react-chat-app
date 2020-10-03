@@ -1,14 +1,9 @@
-.messagebox-control {
-    margin-top: 5vh;
-    box-shadow: 0 0 25px #ddd;
-    border-radius: 7px;
-    padding: 10px 10px;
-}
-
-.messagebox-control .exit {
+.exit {
+    position: fixed;
+    top: 10px;
+    right: 15px;
     color: white;
     background: #888;
-    box-shadow: 0 0 25px #ddd;
     padding: 4px 10px;
     font-size: 0.75rem;
     border-radius: 3px;
@@ -18,8 +13,7 @@
     cursor: pointer;
     transition: 0.3s;
 }
-
-.messagebox-control .exit:hover {
+.exit:hover {
     background: #D32F2F;
     box-shadow: 0 0 5px #D32F2F;
 }
@@ -32,13 +26,15 @@
     padding: 20px 10px;
     border-radius: 7px;
     overflow-y: scroll;
-    box-shadow: 0 0 25px #ddd;
+    background: url('https://blog.1a23.com/wp-content/uploads/sites/2/2020/02/Desktop.png');
+    background-size: cover;
 }
 
 
 .messagebox-container .message {
     padding: 5px 15px;
     border-radius: 7px;
+    color: #fff;
 }
 .messagebox-container .message small {
     color: #bbb;
@@ -68,6 +64,5 @@
         width: calc(100% - 45px);
         left: 12px;
         top: 12vh;
-        box-shadow: 0 0 25px #ccc;
     }
 }
