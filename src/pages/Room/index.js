@@ -48,7 +48,7 @@ const Room = (props) => {
 
             socketRef.current.on('got-message', (payload) => {
                 setMessages((prev) => {
-                    return [...prev, payload.data]
+                    return [payload.data, ...prev]
                 })
             })
 
