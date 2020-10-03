@@ -4,7 +4,7 @@ import MessageBox from '../../components/MessageBox';
 import io from "socket.io-client";
 import './style.css';
 
-let SOCKET_SERVER = "http://localhost:4000/chat";
+let SOCKET_SERVER = "https://learnage-server.precisely.co.in:4000/chat";
 
 const Room = (props) => {
     const roomID = props.match.params.roomID;
@@ -57,6 +57,7 @@ const Room = (props) => {
                 console.log(users)
             })
         }
+        // eslint-disable-next-line
     }, [name, roomID])
 
     const closeModal = () => setModal(false)
